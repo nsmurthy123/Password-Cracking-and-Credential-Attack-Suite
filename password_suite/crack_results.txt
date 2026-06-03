@@ -1,0 +1,7 @@
+USERNAME|ALGORITHM|CRACKED|PASSWORD|ATTEMPTS|TIME|METHOD
+bhuvanesh|md5|True|hello123|794|0.0233|dictionary
+sam|md5|True|password|1051|0.0032|dictionary
+ruth|sha256|True|qwerty2024|1098|0.0032|dictionary
+lucy|sha256|False|None|1223|0.002|dictionary
+meowth|sha512|False|None|1223|0.005|dictionary
+frank|bcrypt|False|None|1223|0.003|dictionary

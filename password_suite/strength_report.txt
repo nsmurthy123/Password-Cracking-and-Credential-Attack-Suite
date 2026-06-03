@@ -1,0 +1,7 @@
+PASSWORD|ENTROPY|SCORE|LABEL|TIPS
+hello123|41.36|40|WEAK|Increase length to at least 12 characters | Add uppercase letters (A–Z) | Add a symbol (!@#$%^&*) | Avoid patterns: digit-prefix-or-suffix
+password|37.6|0|CRITICAL|Increase length to at least 12 characters | Add uppercase letters (A–Z) | Add at least one digit (0–9) | Add a symbol (!@#$%^&*) | This password is in common breach lists — change it immediately | Avoid patterns: all-letters, starts-with-common: pass
+qwerty2024|51.7|30|VERY WEAK|Increase length to at least 12 characters | Add uppercase letters (A–Z) | Add a symbol (!@#$%^&*) | Avoid patterns: keyboard-walk: qwerty, keyboard-walk: qwert, contains-year, digit-prefix-or-suffix
+P@ssw0rd!|58.99|70|STRONG|Increase length to at least 12 characters
+Tr0ub4dor&3|72.1|80|STRONG|Increase length to at least 12 characters | Avoid patterns: digit-prefix-or-suffix
+sam@123|42.61|45|WEAK|Increase length to at least 12 characters | Add uppercase letters (A–Z) | Avoid patterns: digit-prefix-or-suffix

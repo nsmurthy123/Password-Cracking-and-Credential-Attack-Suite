@@ -1,0 +1,75 @@
+=================================================================
+  PASSWORD SECURITY AUDIT REPORT
+  Generated : 2026-05-12  09:11:39
+  Project   : Password Cracking & Credential Attack Suite
+  Purpose   : Educational / Authorised Penetration Test
+=================================================================
+
+SECTION 1 — EXECUTIVE SUMMARY
+-----------------------------------------------------------------
+  Total accounts tested  : 6
+  Passwords cracked      : 3  (50%)
+  Skipped (bcrypt/strong): 0
+  Resistant accounts     : 3
+
+  Avg crack time         : 0.0099s
+  Fastest crack          : 0.0032s
+  Slowest crack          : 0.0233s
+
+SECTION 2 — CRACKING SIMULATION RESULTS
+-----------------------------------------------------------------
+  USERNAME     ALGORITHM  RESULT     TIME       METHOD
+  ------------------------------------------------------------
+  bhuvanesh    MD5        CRACKED (hello123)             0.0233     dictionary
+  sam          MD5        CRACKED (password)             0.0032     dictionary
+  ruth         SHA256     CRACKED (qwerty2024)           0.0032     dictionary
+  lucy         SHA256     RESISTANT                      0.002      dictionary
+  meowth       SHA512     RESISTANT                      0.005      dictionary
+  frank        BCRYPT     RESISTANT                      0.003      dictionary
+
+SECTION 3 — HASH ALGORITHM AUDIT
+-----------------------------------------------------------------
+  MD5        : 2 account(s) — CRITICAL — cracked in seconds, never use for passwords
+  SHA256     : 2 account(s) — MODERATE — not designed for passwords, use bcrypt instead
+  SHA512     : 1 account(s) — MODERATE — better but still faster than bcrypt
+  BCRYPT     : 1 account(s) — STRONG   — slow by design, recommended
+
+SECTION 4 — PASSWORD STRENGTH ANALYSIS
+-----------------------------------------------------------------
+  Passwords analyzed  : 6
+  Average score       : 44.2 / 100
+  Average entropy     : 50.7 bits
+
+  Strength Distribution:
+    CRITICAL     :   1  #
+    VERY WEAK    :   1  #
+    WEAK         :   2  ##
+    MODERATE     :   0  
+    STRONG       :   2  ##
+    VERY STRONG  :   0  
+
+SECTION 5 — RECOMMENDATIONS & MITIGATION STEPS
+-----------------------------------------------------------------
+  CRITICAL — Immediate Action Required:
+  1. Migrate ALL MD5/SHA-1 password hashes to bcrypt (cost 12)
+     or Argon2id immediately.
+  2. Force password reset for all cracked accounts.
+  3. Enable Multi-Factor Authentication (MFA) for all users.
+
+  HIGH — Complete Within 30 Days:
+  4. Enforce minimum password policy:
+       - Minimum 12 characters
+       - Must contain: uppercase + lowercase + digit + symbol
+       - Cannot match any of last 5 passwords
+  5. Block passwords found in breach databases (HaveIBeenPwned API)
+  6. Implement account lockout: 5 attempts → 15-minute lockout
+
+  MEDIUM — Complete Within 90 Days:
+  7. Rate limiting: max 3 login attempts per minute per IP
+  8. Deploy CAPTCHA on all public login forms
+  9. Run quarterly password audits using this toolkit
+  10. Disable LLMNR/NBT-NS on Windows (prevents Responder attacks)
+
+=================================================================
+  END OF REPORT — For authorised use only
+=================================================================
